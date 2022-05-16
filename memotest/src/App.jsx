@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import './App.css';
-import Cards from './components/Cards';
+import Card from './components/Card';
+import { images } from './imgImports';
 
 function App() {
-  const [count, setCount] = useState(0);
+  const [cards, setCards] = useState([1, 2, 3, 4, 5, 6]);
 
   return (
     <div className='App'>
       <div className='cards-container'>
-        <Cards />
+        {cards.map((card) => {
+          return <Card />;
+        })}
       </div>
     </div>
   );
