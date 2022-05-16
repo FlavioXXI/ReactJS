@@ -2,7 +2,7 @@ import src1 from './img/animals/leon.jpg';
 import src2 from './img/animals/leopardo.jpg';
 import src3 from './img/animals/puma.jpg';
 import src4 from './img/animals/puma2.jpg';
-import src5 from './img/animals/tigre_colmillo.jpg';
+import src5 from './img/animals/tigre_colmillos.jpg';
 import src6 from './img/animals/tigre.jpg';
 
 const images = [
