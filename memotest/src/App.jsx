@@ -12,8 +12,15 @@ function App() {
   return (
     <div className='App'>
       <div className='cards-container'>
-        {cards.map((card) => {
-          return <Card />;
+        {cards.map((card, index) => {
+          return (
+            <Card
+              key={index}
+              name={card.animal}
+              number={index}
+              frontFace={card.src}
+            />
+          );
         })}
       </div>
     </div>
