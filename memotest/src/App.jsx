@@ -1,3 +1,5 @@
+// https://www.youtube.com/watch?v=OpZEIxqQfIs&t=1002s
+
 import { useEffect, useState } from 'react';
 import './App.css';
 import Card from './components/Card';
