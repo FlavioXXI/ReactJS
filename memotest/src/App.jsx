@@ -8,8 +8,20 @@ import { images } from './imgImports';
 function App() {
   const [cards, setCards] = useState([]);
   useEffect(() => {
+    shuffle(images);
     setCards(images);
   }, []);
+
+  function shuffle(arrayCard) {
+    var j, x, i;
+    for (i = arrayCard.length - 1; i > 0; i--) {
+      j = Math.floor(Math.random() * (i + 1));
+      x = arrayCard[i];
+      arrayCard[i] = arrayCard[j];
+      arrayCard[j] = x;
+    }
+    return arrayCard;
+  }
 
   return (
     <div className='App'>
