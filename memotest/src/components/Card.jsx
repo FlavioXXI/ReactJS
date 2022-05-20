@@ -11,12 +11,19 @@ const Card = ({
   disabledCards,
 }) => {
   const [isFlipped, setIsFlipped] = useState(false);
+  const [hasEvent, setHasEvent] = useState(true);
 
   useEffect(() => {
     if (unflipedCards.includes(number)) {
       setTimeout(() => setIsFlipped(false), 800);
     }
   }, [unflipedCards]);
+
+  useEffect(() => {
+    if (disabledCards.includes(number)) {
+      setHasEvent(false);
+    }
+  });
 
   function handleClickCard(e) {
     const value = flipCard(name, number);
@@ -38,7 +45,7 @@ const Card = ({
           className='card-image'
           src={frontFace}
           alt='front-face'
-          onClick={handleClickCard}
+          onClick={hasEvent ? handleClickCard : null}
         ></img>
       </ReactCardFlip>
     </div>
